@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  part2_app:
+    container_name: part2_app
+    restart: always
+    build: ./part2_app
+    ports:
+      - "7050:7050"
+    command: gunicorn -w 10 -b 0.0.0.0:7050 wsgi:app -t 90000
+  
+  nginx:
+    container_name: nginx
+    restart: always
+    build: ./nginx
+    ports:
+      - "80:80"
+    depends_on:
+      - part2_app
