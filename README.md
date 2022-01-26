@@ -18,7 +18,7 @@ Once it is built and is up and running, allow for some time for it to download t
 # How to query?
 Once the containers are up and running, you can query the model in one of the following ways,
 1. python3 client.py <IP> <Port> <text here>   ||   python3 client.py localhost 7050 I love hamburger and fries  
-2. python3 multiThreadClient.oy <threadCount> ||   python3 multiThreadClient.py 150  
+2. python3 multiThreadClient.py <threadCount> ||   python3 multiThreadClient.py 150  
 3. You can also use python notebook to query the server using multiTreadedClient code included in it.  
 
 # Testing...
