@@ -32,7 +32,7 @@ def get_senti():
     try:
         text = request.args['text']
     except:
-        return flask.jsonify({"Positive":None, "Negative":None, "Neutral":None})
+        return flask.jsonify({"Positive":-1, "Negative":-1, "Neutral":-1})
     task='sentiment'
     MODEL = f"cardiffnlp/twitter-roberta-base-{task}"
     labels=['negative', 'neutral', 'positive']
@@ -47,7 +47,7 @@ def get_senti():
         # tokenizer.save_pretrained(MODEL)
         # text = tokenizer(text, return_tensors='pt')
         # output = model(**text)
-        return flask.jsonify({"Positive":None, "Negative":None, "Neutral":None})
+        return flask.jsonify({"Positive":-1, "Negative":-1, "Neutral":-1})
     scores = output[0][0].detach().numpy()
     scores = softmax(scores)
     ranking = np.argsort(scores)
