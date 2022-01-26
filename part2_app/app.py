@@ -47,7 +47,7 @@ def get_senti():
         # tokenizer.save_pretrained(MODEL)
         # text = tokenizer(text, return_tensors='pt')
         # output = model(**text)
-        pass
+        return flask.jsonify({"Positive":None, "Negative":None, "Neutral":None})
     scores = output[0][0].detach().numpy()
     scores = softmax(scores)
     ranking = np.argsort(scores)
