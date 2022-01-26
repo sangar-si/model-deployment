@@ -20,3 +20,7 @@ Once the containers are up and running, you can query the model in one of the fo
 1. python3 client.py <text here>   ||   python3 client.py I love hamburger and fries  
 2. python3 multiThreadClient.oy <threadCount> ||   python3 multiThreadClient.py 150  
 3. You can also use python notebook to query the server using multiTreadedClient code included in it.  
+
+# Testing...
+Testing was carried out in my laptop with the following configuration,
+  Core i7 Processor - 16 GB RAM - GTX 960M GPU - Windows 10
