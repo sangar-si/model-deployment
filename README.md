@@ -23,4 +23,5 @@ Once the containers are up and running, you can query the model in one of the fo
 
 # Testing...
 Testing was carried out in my laptop with the following configuration,
-  Core i7 Processor - 16 GB RAM - GTX 960M GPU - Windows 10
+  Core i7 Processor - 16 GB RAM - GTX 960M GPU - Windows 10  
+  Testing was done through docker in which I was able to build, run and query it without any error. Please allow for some time at startup for downloading model and the dependencies.
