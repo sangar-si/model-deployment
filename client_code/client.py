@@ -12,7 +12,7 @@ def print_response(resp):
 if __name__ == "__main__":
     ip_text = sys.argv[1]
     for i, arg in enumerate(sys.argv):
-        if i>1:
+        if i>3:
             ip_text = ip_text+ "+" + arg
-    r = requests.get('http://localhost:7050/?text='+ip_text, timeout=900)
+    r = requests.get('http://'+sys.argv[1]+":"+sys.argv[2]+'/?text='+ip_text, timeout=30)
     print_response(r)
